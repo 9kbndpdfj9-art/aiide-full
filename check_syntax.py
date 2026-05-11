@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""语法检查"""
 import sys
 from pathlib import Path
 
