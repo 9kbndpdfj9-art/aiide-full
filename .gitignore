@@ -1,0 +1,10 @@
+# 排除大文件和构建产物
+*.zip
+downloads/
+android/.gradle/
+android/app/build/
+engine/target/
+engine/Cargo.lock
+node_modules/
+*.log
+.DS_Store
