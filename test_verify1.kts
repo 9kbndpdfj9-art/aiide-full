@@ -1,7 +1,4 @@
-#!/usr/bin/env kotlin
-// Kotlin script test
-
-println("Kotlin test script running...")
-
-val testValue = "Hello from Kotlin"
-println(testValue)
+// Kotlin测试验证脚本
+fun main() {
+    println("Kotlin测试验证")
+}
