@@ -1,39 +1,38 @@
 # AIIDE - Android AI IDE
 
-意图驱动、零Token预测、沙箱安全的移动端AI开发环境
+Intent-driven, zero-token prediction, sandbox-safe mobile AI development environment
 
-## 特性
+## Features
 
-- **意图驱动开发**: 自然语言输入意图，自动完成代码生成
-- **零Token预测引擎**: 80%任务无需LLM调用，节省成本
-- **语义影子系统**: 实时追踪代码行为变化，保证正确性
-- **沙箱隔离**: 实验性修改在沙箱中预演，确保安全
-- **多模型路由**: 支持OpenAI/Anthropic/Gemini/Ollama等
-- **SCTP协议**: 90% Token压缩比，极致效率
+- **Intent-driven development**: Natural language input intent, automatic code generation
+- **Zero-Token prediction engine**: 80% tasks without LLM calls, cost-saving
+- **Semantic shadow system**: Real-time tracking of code behavior changes
+- **Sandbox isolation**: Experimental modifications rehearsed in sandbox
+- **Multi-model routing**: Supports OpenAI/Anthropic/Gemini/Ollama
+- **SCTP protocol**: 90% Token compression ratio
 
-## 项目结构
+## Project Structure
 
 ```
 aiide/
-├── android/          # Android Kotlin应用 (88+引擎)
+├── android/          # Android Kotlin app (88+ engines)
 │   └── app/src/main/
-│       └── java/com/aiide/   # 所有引擎代码
-├── engine/             # Rust高性能引擎
-│   └── src/
-├── docs/               # 完整文档
-├── frontend/           # 前端资源
-├── scripts/            # 工具脚本
-└── downloads/          # 下载文件
+│       └── java/com/aiide/
+├── engine/             # Rust high-performance engine
+├── docs/               # Complete documentation
+├── frontend/           # Frontend resources
+├── scripts/            # Utility scripts
+└── downloads/          # Download files
 ```
 
-## 下载
+## Download
 
-- [下载完整项目ZIP](https://github.com/9kbndpdfj9-art/aiide-full/archive/refs/heads/main.zip)
+[Download ZIP](https://github.com/9kbndpdfj9-art/aiide-full/archive/refs/heads/main.zip)
 
-## 技术栈
+## Tech Stack
 
 - **Android**: Kotlin, MVVM, Coroutines
-- **Rust**: 高性能引擎核心
+- **Rust**: High-performance engine core
 - **AI**: OpenAI, Anthropic, Google Gemini, Ollama
 
 ## License
