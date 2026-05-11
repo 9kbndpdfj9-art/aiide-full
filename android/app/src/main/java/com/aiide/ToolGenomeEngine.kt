@@ -60,6 +60,21 @@ class ToolGenomeEngine(private val context: Context) {
         saveHistory()
     }
 
+    fun recordToolCall(
+        toolName: String,
+        success: Boolean,
+        latencyMs: Long,
+        tokensConsumed: Int
+    ) {
+        recordToolCall(
+            toolName = toolName,
+            parameters = emptyMap(),
+            result = "",
+            success = success,
+            durationMs = latencyMs
+        )
+    }
+
     fun getToolGenome(toolName: String): ToolGenome {
         val toolCalls = callHistory.filter { it.toolName == toolName }
         if (toolCalls.isEmpty()) {
@@ -80,6 +95,20 @@ class ToolGenomeEngine(private val context: Context) {
             avgDurationMs = avgDuration,
             patterns = patterns,
             score = score
+        )
+    }
+
+    fun getGenomeReport(): Map<String, Any> {
+        val allGenomes = getAllGenomes()
+        val totalTools = allGenomes.size
+        val avgScore = if (allGenomes.isNotEmpty()) allGenomes.map { it.score }.average() else 0.0
+        val totalCalls = allGenomes.sumOf { it.callCount }
+
+        return mapOf(
+            "total_tools" to totalTools,
+            "average_tool_score" to avgScore,
+            "total_calls" to totalCalls,
+            "top_tools" to getTopTools(5).map { it.toolName }
         )
     }
 
